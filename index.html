@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Quiz</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>What is 2 + 2?</h2>
+
+    <form id="quiz-form">
+      <div>
+        <input type="radio" id="choice1" name="quiz" value="4">
+        <label for="choice1">4</label><br>
+
+        <input type="radio" id="choice2" name="quiz" value="22">
+        <label for="choice2">22</label><br>
+
+        <input type="radio" id="choice3" name="quiz" value="3">
+        <label for="choice3">3</label>
+      </div>
+    </form>
+
+    <button id="submit-answer">Submit Answer</button>
+    <p id="feedback"></p>
+  </div>
+
+  <!-- External JS -->
+  <script src="quiz.js"></script>
+</body>
+</html>
+
