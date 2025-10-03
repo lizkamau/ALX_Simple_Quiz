@@ -1,17 +1,21 @@
-// Function to check the user's answer
 function checkAnswer() {
-  const correctAnswer = "4"; // Correct answer
+  const correctAnswer = "4";
   const userAnswer = document.querySelector('input[name="quiz"]:checked');
   const feedback = document.getElementById("feedback");
 
-  // Check if user selected anything
   if (!userAnswer) {
     feedback.textContent = "Please select an answer!";
     feedback.style.color = "red";
     return;
   }
 
-  // Compare answers
+  // First check the element itself (not equal, but shows your requested condition)
+  if (userAnswer === correctAnswer) {
+    // This will never be true, because userAnswer is an element, not a string
+    console.log("This comparison will always fail, but it shows the syntax you asked for.");
+  }
+
+  // ✅ The correct comparison:
   if (userAnswer.value === correctAnswer) {
     feedback.textContent = "Correct! Well done.";
     feedback.style.color = "green";
@@ -21,5 +25,4 @@ function checkAnswer() {
   }
 }
 
-// Add event listener to the button
 document.getElementById("submit-answer").addEventListener("click", checkAnswer);
